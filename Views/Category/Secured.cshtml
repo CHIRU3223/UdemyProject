@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Secured";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>This is Secured</h1>
+<h2>@User.Identity.Name</h2>
+<p>@User.Identity.AuthenticationType</p>
+<ul>
+    @foreach(var c in User.Claims)
+            {
+                <li>@c.Type : @c.Value</li>
+            }
+</ul>
+

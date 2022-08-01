@@ -1,0 +1,14 @@
+﻿@model Category
+
+
+<h1>Create</h1>
+<form method="POST">
+    <div class="mb-3">
+        Name: <input asp-for="Name" type="text" class="form-control" />
+        DisplayOrder: <input asp-for="DisplayOrder" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
